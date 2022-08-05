@@ -25,10 +25,10 @@
 ![](https://lh4.googleusercontent.com/OUq2kn86oYEf2o8afOSdsTnbwZWGDD8jG5fowL49FUL89HW-vNstPZrGAQNJBk_AaqoOc4DvgfXHZzPW3t_JyKa9QtMuTYSOFA2h3ABN-s9SeA2ollcNWC3MyrVoNOznuLbX_BEevDKC1Foc_d3nGbM)
 
 ## Specular (glossy, reflection at smooth material)
-- v: vector form surface point to viewer / camera
+- v: vector form surface point to viewer / camera (Einheitsvektor)
 - n - vektor: normal vector at surface point (unit length / normiert: 1/|n| * n)
 - l: vector from surface point to light source (l = light src point - surface point) (unit length / normiert: 1/|l| * l)
-- r: ideal reflection vector
+- r: ideal reflection vector (Einheitsvektor)
 ![[reflection_vector_formula.png]]
 - Ii: light intensity of light source
 - ks: specular material constant (either 0 or 1)
@@ -96,10 +96,25 @@ Matrix representation of the standard projection onto the z = 1 plane
 **![](https://lh4.googleusercontent.com/MmNNwMY_hbmuYYc0m96PXEcLvlX-_QtdBRTUIWy1lt9uUna1gj8I2gveRuPsc9VdfuRdmChMPcI5783WCuZHKHK6ndzNbMM1SV7W-5IMe6-6whc2y3yTRSNJaguc8o7W30K7LUC2hKqikZsOMWeSqDU)
 
 ## Alpha blending
+
+Additive blending: farben werden addiert (alpha * col + alpha * col usw.)
+Multiplicative blending: farben werden multipliziert
+
 (src): incoming fragment
 (dst): values in colorbuffer
 
-OVER (back to front):
+IMPORTANT: Cdst und Csrc sind nur rgb vektoren (ohne alpha)
+
+ALPHA (over for 2 elements): 
+given C1 and C2:
+
+Then:
+Cd = alpha2 * C2
+Cs = alpha1 * C1
+
+C = Cs + (1 - aplha1) * Cd
+
+OVER (back to front): 
 Cdst = Asrc * Csrc + (1 - Asrc) * Cdst
 
 UNDER (front to back):
@@ -115,7 +130,8 @@ Cdst = Adst * Cbg + Cdst
 
 ## Texture filtering
 **![](https://lh5.googleusercontent.com/RDfYxzZKLh4jC0L9Kwed8Cb-MmKyby70WhOwTgVIqlyVY_CAzoXy4OEn-gpoI37-ixg-bT8CQZOP6ujG52daZ2QAu_gc48LoX0Wl2IGS0VgePEt0CP2KNfiQUqrxQMA_muxe_EszCcUvmZg0hp0wrZQ)**
-
+A,B,C,D sind Farbvektoren
+x,y sind blaue flaeche
 ## Mipmapping 
 **![](https://lh3.googleusercontent.com/MT_A0U4gZ2zAytdWBTwLXzIdg3R7VAHemYrCAGP_BVJHVaZ39f1F6g1FWfSMpa5GtBMGhzOhrLmeymCOcVECvG1O9PIbIbDOudJ0lfb-ctpEw5xmcwwN545WcQv_T0-zk18BwF60OJxg9-U6guTLkZQ)**
 **![](https://lh4.googleusercontent.com/WF05q0WJJjq6HvsaE4OclBzJFqLs0DoAcQwOXQVmv2yKfULVUphDmCV1Agitx-nb5Xk92ZGQZdO4CPVK4bVhPRhmr11Lh1onTQTPs3UUF8Vg_b6JJBi6ZiRPLggZFDv9MGJrUNuXF-YZfXTte70EGBM)**
@@ -151,3 +167,6 @@ Heuristic (approximation of pA and pB):
 **![](https://lh4.googleusercontent.com/VfjfP-tw8SAS6wXbOXxSLE_JCMMftntMRhFCKZlwN-sYdDMbmezGl4cshz1GbdXwt9xBGx1cGPBmQOWWsCEvJ2b2RcHMqx3VFienVi4nRfmoXcbnyeM2zgo6SeUPm0-YaXPMWElDEM54VIF2PlUur2w)**
 **Example: ![](https://lh5.googleusercontent.com/2bnpFKw5Udwp8YGZFTorxP2H211VAZZtev88vsAxrpW-x_PyhC7MH64KztjFBZErW2aY_fJXw7m7QbMTN61wP-FbmfufjJ0NxzqD1QVMelyVMMNjSXIH5gtxWldVlK3QhqhE3gTOGpZaQrZNmn9bt50)
 BVH REFIT SEE FOLIEN
+
+## Transformations
+![[Pasted image 20220805143745.png]]
