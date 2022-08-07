@@ -1,33 +1,29 @@
 {
   "main": {
-    "id": "49d15bb6f2b528bc",
+    "id": "8df31c62ef20f1d4",
     "type": "split",
     "children": [
       {
-        "id": "83a7ac7cd3e7e6b6",
+        "id": "6aaa66cc9b76aa3d",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "ECG Formeln.md",
-            "mode": "source",
-            "source": false
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "e5cb8ca52124f394",
+    "id": "45d683fde5c7a6fd",
     "type": "split",
     "children": [
       {
-        "id": "5bd5b44e274cbc68",
+        "id": "1a0d488fc378ef37",
         "type": "tabs",
         "children": [
           {
-            "id": "9a9c841cc2222823",
+            "id": "3e2b765ded8bfb74",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -35,7 +31,7 @@
             }
           },
           {
-            "id": "6eddca8518fc61c0",
+            "id": "3e220788dcf20065",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -50,7 +46,7 @@
             }
           },
           {
-            "id": "540583c056b5a9a4",
+            "id": "f4e75efbbe8bc388",
             "type": "leaf",
             "state": {
               "type": "starred",
@@ -64,20 +60,19 @@
     "width": 300
   },
   "right": {
-    "id": "359b408c057c6c7f",
+    "id": "1d0b634fa9f1615a",
     "type": "split",
     "children": [
       {
-        "id": "14754eb31734084b",
+        "id": "8ce208dca8785e23",
         "type": "tabs",
         "children": [
           {
-            "id": "734b6ca37502376a",
+            "id": "f9a42278e9391faa",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ECG Formeln.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,19 +84,18 @@
             }
           },
           {
-            "id": "ec4a4f3f5082dc3c",
+            "id": "d774f5c577e1d00e",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ECG Formeln.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "8d49cc5d8a80f939",
+            "id": "9d47985759dcd7ec",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -112,13 +106,11 @@
             }
           },
           {
-            "id": "2c133b5d8f7c6dc1",
+            "id": "0d005b5e5b80a18f",
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "ECG Formeln.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -128,10 +120,6 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "83a7ac7cd3e7e6b6",
-  "lastOpenFiles": [
-    "Pasted image 20220805143745.png",
-    "Pasted image 20220805191041.png",
-    "ECG Formeln.md"
-  ]
+  "active": "6aaa66cc9b76aa3d",
+  "lastOpenFiles": []
 }

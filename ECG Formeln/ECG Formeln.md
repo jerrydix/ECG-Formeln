@@ -170,3 +170,7 @@ BVH REFIT SEE FOLIEN
 
 ## Transformations
 ![[Pasted image 20220805143745.png]]
+
+![[Pasted image 20220805191041.png]]
+![[Pasted image 20220805191106.png]]
+![[Pasted image 20220805191131.png]]
