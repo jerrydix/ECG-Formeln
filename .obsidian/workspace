@@ -7,8 +7,12 @@
         "id": "6aaa66cc9b76aa3d",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "ECG Formeln/ECG Formeln.md",
+            "mode": "source",
+            "source": false
+          }
         }
       }
     ],
@@ -73,6 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "ECG Formeln/ECG Formeln.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,6 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "ECG Formeln/ECG Formeln.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -110,7 +116,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "ECG Formeln/ECG Formeln.md"
+              }
             }
           }
         ]
@@ -121,5 +129,7 @@
     "collapsed": true
   },
   "active": "6aaa66cc9b76aa3d",
-  "lastOpenFiles": []
+  "lastOpenFiles": [
+    "ECG Formeln/Pasted image 20220805143745.png"
+  ]
 }

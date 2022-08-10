@@ -13,7 +13,9 @@
 
 ![](https://lh6.googleusercontent.com/D_Heb4Djpk8aZ8qWMl-pgPbnSlx8cYIR2O9m179_Nz-8c09qQTzJljGN5o9SeiZcI5ddqG0U7tQjAWlvTZSHGRrNqNtPhICfypDx0G6fxnS5k1X67w0nDifN_GYtiSGevvU2ib87hpq21uAH6C_HUFY)
 ## Barycentric Coordinates / Interpolation
+Point has to have coordinates between 0 and 1 to be inside traingle, else it is outside of the triangle
 ![[barycentric_coords.png]]
+Matrix mit [P1,P2,P3] mit [P] auf rechter seite -> gauss -> (alpha1, alpha2, alpha3)^T
 
 ## Lambertian (diffuse at rough material)
 - Ir (x, wr): light intensity at surface point x, (reflection vector wr (called mirror reflection))
@@ -89,7 +91,7 @@ Matrix representation of the standard projection onto the z = 1 plane
 #### API projection matrix
 **![](https://lh5.googleusercontent.com/DceyTBaqs6xULXtAqkZoAKaMv9hr7XUcamRTSs-Q6R9oS4yBXvErbv9DxWakefm2nnySo6ZAZJtVTnqEbqKonumuLxUseiBIsq9a3nor7rwVlkwxOLlFhXlEuciKCutTIR-C1jHcA4mHJ_DeJI38W38)**
 
-## Rasterization
+## Rasterization (viewport transformation matrix)
 **![](https://lh4.googleusercontent.com/YWhc0heK0iyhROazw41gyGS69lYXMebbmzDIwBQwY9hRXWEfiNWDqmi61dzR1umfmC6qlW9I7iY7KMbHqp2ar46r4ToLaG0lglXjS6xLjT8lr1El22DMwimDrdLUsgZaOspJsIvZmDdA-HfJ9LFW1to)
 
 ### Viewport Transformation Matrix:
@@ -115,25 +117,28 @@ Cs = alpha1 * C1
 C = Cs + (1 - aplha1) * Cd
 
 OVER (back to front): 
-Cdst = Asrc * Csrc + (1 - Asrc) * Cdst
+**Cdst = Csrc + (1 - Asrc) Cdst**
 
 UNDER (front to back):
-Cdst = Adst * (Asrc * Csrc) + Cdst
+**Cdst = Adst (Asrc Csrc) + Cdst**
+**Adst = 0 + (1 - Asrc) Adst**
 
 for background: 
-Cdst = Adst * Cbg + Cdst
+**Cdst = Adst Cbg + Cdst**
 
 ## Sampling and Aliasing:
 - Shannon‘s Sampling Theorem: The signal has to be sampled at a frequency that is larger than two times the highest frequency in the signal
 - Supersampling: increase sampling frequency
 - Prefiltering: decrease the highest frequency in the signal
 
-## Texture filtering
+## Texture filtering (nearest, bilinear interpolation)
 **![](https://lh5.googleusercontent.com/RDfYxzZKLh4jC0L9Kwed8Cb-MmKyby70WhOwTgVIqlyVY_CAzoXy4OEn-gpoI37-ixg-bT8CQZOP6ujG52daZ2QAu_gc48LoX0Wl2IGS0VgePEt0CP2KNfiQUqrxQMA_muxe_EszCcUvmZg0hp0wrZQ)**
 A,B,C,D sind Farbvektoren
 x,y sind blaue flaeche
 ## Mipmapping 
+![[Pasted image 20220810150413.png]]
 **![](https://lh3.googleusercontent.com/MT_A0U4gZ2zAytdWBTwLXzIdg3R7VAHemYrCAGP_BVJHVaZ39f1F6g1FWfSMpa5GtBMGhzOhrLmeymCOcVECvG1O9PIbIbDOudJ0lfb-ctpEw5xmcwwN545WcQv_T0-zk18BwF60OJxg9-U6guTLkZQ)**
+### Anisotropic
 **![](https://lh4.googleusercontent.com/WF05q0WJJjq6HvsaE4OclBzJFqLs0DoAcQwOXQVmv2yKfULVUphDmCV1Agitx-nb5Xk92ZGQZdO4CPVK4bVhPRhmr11Lh1onTQTPs3UUF8Vg_b6JJBi6ZiRPLggZFDv9MGJrUNuXF-YZfXTte70EGBM)**
 
 ## Planar reflection
